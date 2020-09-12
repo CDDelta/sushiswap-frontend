@@ -25,7 +25,6 @@ const SushiProvider: React.FC = ({ children }) => {
   // @ts-ignore
   window.sushi = sushi
   // @ts-ignore
-  window.eth = ethereum
 
   useEffect(() => {
     if (ethereum) {

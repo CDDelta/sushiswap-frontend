@@ -1,6 +1,6 @@
 import React from 'react'
-import { Route, Switch, useRouteMatch } from 'react-router-dom'
-import { useWallet } from 'use-wallet'
+import {Route, Switch, useRouteMatch} from 'react-router-dom'
+import {useWallet} from 'use-wallet'
 
 import chef from '../../assets/img/chef.png'
 
@@ -10,15 +10,12 @@ import PageHeader from '../../components/PageHeader'
 import WalletProviderModal from '../../components/WalletProviderModal'
 
 import useModal from '../../hooks/useModal'
+import StakeXSushi from "../StakeXSushi";
 
-import Farm from '../Farm'
-
-import FarmCards from './components/FarmCards'
-
-const Farms: React.FC = () => {
-  const { path } = useRouteMatch()
-  const { account } = useWallet()
-  const [onPresentWalletProviderModal] = useModal(<WalletProviderModal />)
+const Staking: React.FC = () => {
+  const {path} = useRouteMatch()
+  const {account} = useWallet()
+  const [onPresentWalletProviderModal] = useModal(<WalletProviderModal/>)
   return (
     <Switch>
       <Page>
@@ -26,15 +23,12 @@ const Farms: React.FC = () => {
           <>
             <Route exact path={path}>
               <PageHeader
-                icon={<img src={chef} height="120" />}
-                subtitle="Earn SUSHI tokens by staking SushiSwap V2 LP Tokens."
-                title="Select Your Favorite Dishes"
+                icon={<img src={chef} height="120"/>}
+                subtitle="Welcome to the Sushi Bar, stake Sushi to earn Sushi."
+                title="Irasshaimase!"
               />
-              <FarmCards />
             </Route>
-            <Route path={`${path}/:farmId`}>
-              <Farm />
-            </Route>
+            <StakeXSushi/>
           </>
         ) : (
           <div
@@ -56,4 +50,4 @@ const Farms: React.FC = () => {
   )
 }
 
-export default Farms
+export default Staking

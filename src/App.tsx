@@ -13,7 +13,7 @@ import useModal from './hooks/useModal'
 import theme from './theme'
 import Farms from './views/Farms'
 import Home from './views/Home'
-import Stake from './views/Stake'
+import Staking from "./views/Staking";
 
 const App: React.FC = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -39,7 +39,7 @@ const App: React.FC = () => {
             <Farms />
           </Route>
           <Route path="/staking">
-            <Stake />
+            <Staking />
           </Route>
         </Switch>
       </HashRouter>

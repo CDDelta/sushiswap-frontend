@@ -1,1 +1,1 @@
-export { Context, default } from './SushiProvider'
+export { default, Context } from './SushiProvider'
