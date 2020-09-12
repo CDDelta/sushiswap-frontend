@@ -54,7 +54,10 @@ const Providers: React.FC = ({ children }) => {
       <UseWalletProvider
         chainId={1}
         connectors={{
-          walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
+          walletconnect: {
+            rpcUrl:
+              'https://mainnet.infura.io/v3/3b85c1153c384e0a8484cec21f03505e',
+          },
         }}
       >
         <SushiProvider>
