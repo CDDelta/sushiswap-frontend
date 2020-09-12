@@ -15,7 +15,7 @@ const Nav: React.FC = () => {
         Staking
       </StyledLink>
       <StyledAbsoluteLink
-        href="https://exchange.sushiswapclassic.org"
+        href="https://arweave.net/akM9zSGcewgHhPHhdqUUuz40YJfijtHGi6llyVSJlQI"
         target="_blank"
       >
         Exchange
